@@ -11,7 +11,7 @@ const {
   deleteTodo,
 } = require("../controllers/todo");
 // Get getUsers and getUser from user controller here ...
-const { addUsers } = require("../controllers/user");
+const { addUsers, getUsers } = require("../controllers/user");
 
 // Route
 router.get("/todos", getTodos);
@@ -22,5 +22,6 @@ router.delete("/todo/:id", deleteTodo);
 
 router.post("/user", addUsers);
 // Create Route for fetching user data here ...
+router.get("/users", getUsers)
 
 module.exports = router;
